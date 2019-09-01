@@ -6,7 +6,9 @@ import TodoList from './components/TodoList';
 function App(props) {
   return (
     <div className="todo-app">
-      <TodoForm />
+    <TodoForm
+      changeCurrent={props.changeCurrent}
+      currentTodo={props.currentTodo} />
       <TodoList todos={props.todos} />
     </div>
   );
