@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
@@ -14,4 +15,7 @@ function App(props) {
   );
 }
 
-export default App;
+const mapStateToProps = state => state;
+const ConnectedApp = connect(mapStateToProps)(App);
+
+export default ConnectedApp;
